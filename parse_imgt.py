@@ -4,10 +4,10 @@ import sys
 # File should be from IMGT_V-QUEST_reference_directory
 infile = sys.argv[1]
 
+seqs = []
 with open(infile, 'r') as fh:
     for line in fh:
         line = line.rstrip()
-        seqs = []
         if ">" in line:
             if len(seqs) != 0:
                 print(">%s" % name)
