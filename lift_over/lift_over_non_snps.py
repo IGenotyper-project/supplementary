@@ -29,7 +29,7 @@ def write_lifted_indel(mapping,start,end,stats,lifted_fh):
     out_start = mapping[start][2]
     out_end = mapping[end][2]
     out_line = [out_chrom,out_start,out_end] + stats
-    indel_fh.write("%s\n" % "\t".join(map(str,out_line)))
+    lifted_fh.write("%s\n" % "\t".join(map(str,out_line)))
 
 def write_imprecise_lifted_indel(mapping,start,end,stats,imprecise_lifted_fh):
     if end == None:
