@@ -21,5 +21,5 @@ python lift_over/lift_over_non_snps.py \
   lift_over/igh_to_hg38_liftOver.txt \
   hg38_lifted.bed \
   hg38_imprecise.bed \
-  hg38_not_lifted.bed
+  igh_to_hg38_not_lifted.bed
 ```
