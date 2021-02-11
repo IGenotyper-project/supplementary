@@ -60,8 +60,8 @@ with open(variants_infn,'r') as variants_infh:
             write_lifted_indel(liftOver_mapping,start,end,stats,lifted_variants_fh)
         elif start in liftOver_mapping:
             write_imprecise_lifted_indel(liftOver_mapping,start,None,stats,imprecise_lifted_variants_fh)
-        elif in_end_pos in liftOver_mapping:
+        elif end in liftOver_mapping:
             write_imprecise_lifted_indel(liftOver_mapping,None,end,stats,imprecise_lifted_variants_fh)
         else:
-            not_lifted_indels_fh.write("%s\n" % "\t".join(map(str,line)))
+            not_lifted_variants_fh.write("%s\n" % "\t".join(map(str,line)))
 
